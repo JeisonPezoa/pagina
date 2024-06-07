@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Gracias por tu pedido!</h1>
+        <p>Su menú seleccionado ha sido el siguiente:</p>
+        <div id="menuSeleccionado"></div>
+    </div>
+
+    <script>
+      
+        const urlParams = new URLSearchParams(window.location.search);
+        const menuSeleccionado = urlParams.get('menu');
+
+    
+        document.getElementById('menuSeleccionado').innerText = menuSeleccionado;
+    </script>
+</body>
+</html>
