@@ -4,37 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menús Disponibles</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Menús Disponibles</h1>
-    <div class="menu-container">
-        <div class="menu-box" id="menu1">
-            <a href="https://media.istockphoto.com/id/1295633127/es/foto/carne-de-pollo-a-la-parrilla-y-ensalada-de-verduras-frescas-de-tomate-aguacate-lechuga-y.jpg?s=612x612&w=0&k=20&c=gnuOg5gI009lfvkxnObtGubcG7nVVsqH61zIZkdpc-w=" target="_blank">
-                <img src="https://media.istockphoto.com/id/1295633127/es/foto/carne-de-pollo-a-la-parrilla-y-ensalada-de-verduras-frescas-de-tomate-aguacate-lechuga-y.jpg?s=612x612&w=0&k=20&c=gnuOg5gI009lfvkxnObtGubcG7nVVsqH61zIZkdpc-w=" alt="Menu 1">
-            </a>
-            <h2>Menu 1</h2>
-            <p>Menús disponibles: <span class="count">10</span></p>
-            <button onclick="solicitarMenu('menu1')">Solicitar Menú</button>
-        </div>
-        <div class="menu-box" id="menu2">
-            <a href="https://ejemplo.com/imagen2.jpg" target="_blank">
-                <img src="https://c.files.bbci.co.uk/DBBF/production/_105055265_bandejapaisa.jpg" alt="Menu 2">
-            </a>
-            <h2>Menu 2</h2>
-            <p>Menús disponibles: <span class="count">10</span></p>
-            <button onclick="solicitarMenu('menu2')">Solicitar Menú</button>
-        </div>
-        <div class="menu-box" id="menu3">
-            <a href="https://ejemplo.com/imagen3.jpg" target="_blank">
-                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/copesa/F3K5PQNPDNB5JDDD6HJRK5ATN4.jpeg" alt="Menu 3">
-            </a>
-            <h2>Menu 3</h2>
-            <p>Menús disponibles: <span class="count">10</span></p>
-            <button onclick="solicitarMenu('menu3')">Solicitar Menú</button>
+<body class="bg-light d-flex flex-column justify-content-center align-items-center min-vh-100">
+    <div class="container text-center">
+        <h1 class="my-4">Menús Disponibles</h1>
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-4 menu-box bg-primary text-white" id="menu1">
+                    <a href="https://media.istockphoto.com/id/1295633127/es/foto/carne-de-pollo-a-la-parrilla-y-ensalada-de-verduras-frescas-de-tomate-aguacate-lechuga-y.jpg?s=612x612&w=0&k=20&c=gnuOg5gI009lfvkxnObtGubcG7nVVsqH61zIZkdpc-w=" target="_blank">
+                        <img src="https://media.istockphoto.com/id/1295633127/es/foto/carne-de-pollo-a-la-parrilla-y-ensalada-de-verduras-frescas-de-tomate-aguacate-lechuga-y.jpg?s=612x612&w=0&k=20&c=gnuOg5gI009lfvkxnObtGubcG7nVVsqH61zIZkdpc-w=" class="card-img-top" alt="Menu 1">
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title">Menu 1</h2>
+                        <p class="card-text">Menús disponibles: <span class="count">10</span></p>
+                        <button class="btn btn-light mt-auto" onclick="solicitarMenu('menu1')">Solicitar Menú</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-4 menu-box bg-success text-white" id="menu2">
+                    <a href="https://ejemplo.com/imagen2.jpg" target="_blank">
+                        <img src="https://c.files.bbci.co.uk/DBBF/production/_105055265_bandejapaisa.jpg" class="card-img-top" alt="Menu 2">
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title">Menu 2</h2>
+                        <p class="card-text">Menús disponibles: <span class="count">10</span></p>
+                        <button class="btn btn-light mt-auto" onclick="solicitarMenu('menu2')">Solicitar Menú</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-4 menu-box bg-danger text-white" id="menu3">
+                    <a href="https://ejemplo.com/imagen3.jpg" target="_blank">
+                        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/copesa/F3K5PQNPDNB5JDDD6HJRK5ATN4.jpeg" class="card-img-top" alt="Menu 3">
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title">Menu 3</h2>
+                        <p class="card-text">Menús disponibles: <span class="count">10</span></p>
+                        <button class="btn btn-light mt-auto" onclick="solicitarMenu('menu3')">Solicitar Menú</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
+
